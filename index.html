@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CFP — FORGE 2026</title>
-  <meta name="description" content="Call for Papers for FORGE 2026. />
+  <meta name="description" content="Call for Papers for FORGE 2026." />
   <meta name="theme-color" content="#0b1220" />
 
   <!-- Open Graph (social preview) -->
@@ -384,7 +384,9 @@
 
       <h2>1st International Workshop on Secure and Private Federated & Distributed AI for Industrial Networks.</h2>
       <p>
-      Co-Located with <a href="https://flics-conference.org/">FLiCS 2026</a> - Valencia, Spain - June 9-12, 2026.
+        Co-Located with <a href="https://flics-conference.org/">FLiCS 2026</a> - Valencia, Spain - June 9-12, 2026.
+      </p>
+
       <p>
         FORGE, Secure and Private Federated & Distributed AI for Industrial Networks, invites submissions of original research contributions in
         <b>Privacy and Security</b>. Accepted papers will be presented at the event and included in
@@ -436,115 +438,98 @@ A representative use case is the protection of sensitive industrial data. For ex
         <p>We welcome submissions including (but not limited to) the following topics.</p>
       </div>
 
-      <div class="two">
+            <div class="two">
         <div class="card">
           <h3>Privacy-preserving federated learning for industrial networking and control systems (e.g., PLCs).</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Threat-driven privacy requirements in OT (process parameters, recipes, operational signatures) and privacy budgeting.</li>
+            <li>Edge/PLC constraints: real-time deadlines, CPU/RAM limits, intermittent connectivity, and safe scheduling of training.</li>
+            <li>Mechanisms and trade-offs: differential privacy, secure aggregation, encrypted/attested updates, and trusted execution environments.</li>
+            <li>Heterogeneous and non-IID data across plants/lines: personalization, domain adaptation, and concept-drift handling under privacy constraints.</li>
+            <li>Secure deployment: signed models, attestation, rollback/fail-safe procedures, and safety validation for control impact.</li>
+          </ul>
+        </div>
+
         <div class="card">
           <h3>Distributed and federated security learning for industrial production lines.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Cross-site collaborative detection for rare attacks and low-prevalence faults (label scarcity and semi-/self-supervised learning).</li>
+            <li>Federated transfer learning for commissioning new production lines or equipment (cold-start and few-shot adaptation).</li>
+            <li>Multi-source correlation across PLC/HMI/SCADA, historians, gateways, and network sensors without centralizing raw data.</li>
+            <li>Continual/online learning under process drift (maintenance, seasonality, product changes) with safe update gating.</li>
+            <li>Operationalization: federated SecMLOps (versioning, monitoring, canaries, incident response, and reproducibility).</li>
+          </ul>
+        </div>
+
         <div class="card">
           <h3>Security-by-design methodologies for AI-based anomaly detection in industrial systems.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Secure data lifecycle: provenance, integrity checks, sensor trust scoring, and tamper-evident logging.</li>
+            <li>Design-time threat modeling for AI pipelines (poisoning, evasion, stealth, insider misuse) and explicit security requirements.</li>
+            <li>Robust evaluation protocols beyond accuracy: cost-sensitive false alarms, detection delay, operator workload, and resilience metrics.</li>
+            <li>Fail-safe and safety-aware responses: alerting vs. automated mitigation with hard constraints to avoid unsafe interventions.</li>
+            <li>Explainability for OT operators: mapping detections to industrial semantics (tags, assets, control loops) to reduce triage time.</li>
+          </ul>
+        </div>
+
         <div class="card">
           <h3>AI-based PLC intrusion detection and prevention systems (IDS/IPS).</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Protocol-aware modeling (e.g., Modbus/TCP, S7, OPC UA, EtherNet/IP): command semantics, stateful validation, and sequence constraints.</li>
+            <li>Edge behavioral baselining of PLC logic and I/O patterns with scan-cycle-safe inference and minimal latency overhead.</li>
+            <li>Prevention strategies: command whitelisting, rate limiting, policy enforcement, and safety interlocks suitable for industrial operations.</li>
+            <li>Attack taxonomy and signals: logic/firmware tampering, parameter manipulation, replay, reconnaissance, and lateral movement.</li>
+            <li>Testbeds and reproducibility: realistic datasets, digital twins, and safe red-team methodologies for PLC IDS/IPS evaluation.</li>
+          </ul>
+        </div>
+
         <div class="card">
           <h3>Architectures and protocols for secure, softwarized industrial networks leveraging federated AI.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Reference architectures across device/edge/plant/cloud tiers and placement of orchestration, aggregation, and policy enforcement.</li>
+            <li>Secure orchestration: authentication/authorization, key management, remote attestation, and signed/verified model updates.</li>
+            <li>Segmentation, SDN, and QoS: network slicing and traffic isolation while preserving deterministic communications.</li>
+            <li>Resilience and availability: partition tolerance, failover strategies, intermittent links, and disaster recovery for federated services.</li>
+            <li>Performance engineering: bandwidth caps, compression/quantization of updates, and scheduling training around production constraints.</li>
+          </ul>
+        </div>
+
         <div class="card">
           <h3>Threat modeling, attack surfaces, and defenses specific to federated learning in industrial environments.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>FL-specific threats: poisoning/backdoors, sybil clients, gradient leakage, membership inference, and compromised aggregators.</li>
+            <li>Industrial attacker models: insiders, supply-chain compromise, and adversaries constrained by safety-critical processes.</li>
+            <li>Robust aggregation and update validation: outlier resistance, client reputation, anomaly scoring on model deltas, and rollback triggers.</li>
+            <li>Privacy vs. robustness trade-offs: secure aggregation, TEEs, and cryptographic protections versus detectability of malicious updates.</li>
+            <li>Red-teaming and monitoring of training dynamics: drift alarms, forensic readiness, and continuous security assessment.</li>
+          </ul>
+        </div>
+
         <div class="card">
-          <h3>.</h3>
+          <h3>Privacy-preserving distributed anomaly detection for sensitive industrial data.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Risk of inferring proprietary “secret recipes” from operational data: model inversion, membership inference, and linkage attacks.</li>
+            <li>Distributed detectors without raw data sharing: site-local models with federated calibration, ensembles, or split-learning variants.</li>
+            <li>Privacy-enhancing techniques in practice: differential privacy, secure aggregation, and selective cryptographic methods under OT constraints.</li>
+            <li>Accuracy/privacy/latency trade-offs: impacts of privacy noise and encrypted pipelines on detection delay and false alarm rates.</li>
+            <li>Use-case-driven benchmarks: quality deviations, misconfigurations, stealthy intrusions, and lessons learned from deployments.</li>
+          </ul>
+        </div>
+
         <div class="card">
-          <h3>.</h3>
+          <h3>Deployment, governance, and compliance for secure federated AI in industrial networks.</h3>
           <ul>
-		  <li></li>
-	  </ul>
-	</div>
+            <li>Governance for federated pipelines: roles, responsibilities, change control, and approval gates for model updates.</li>
+            <li>Auditability and evidence generation: provenance, reproducible training, secure logging, and reporting for regulated environments.</li>
+            <li>Lifecycle risk management: vulnerability handling, patching strategies, and model-incident response (containment, rollback, postmortems).</li>
+            <li>Operational KPIs: downtime avoided, false alarm cost, time-to-detect, time-to-triage, and operator workload reduction.</li>
+            <li>Interoperability and standards alignment: mapping controls to common OT and information-security frameworks.</li>
+          </ul>
+        </div>
       </div>
+
       <br/>
 
-Agentic AI and Autonomous Systems
-
-    Multi-agent learning, coordination, and decentralized decision-making
-    Agentic workflows, tool-using agents, and autonomous pipelines
-    LLM- and VLM-based agents in real systems
-    Safety, controllability, monitoring, and evaluation of agentic AI
-    Agents for planning, optimization, and adaptive control
-
-Optimization, Scheduling, and System-Level Intelligence
-
-    Multi-objective optimization and Pareto-front analysis for learning systems
-    Constrained and safe optimization (hard constraints, feasibility-first, penalty methods)
-    Constraint-based AI, CP-SAT, MILP, and hybrid solvers
-    Learning-optimization co-design
-    Workflow scheduling, DAG optimization, and service placement
-    Energy-aware, latency-aware, and cost-aware optimization
-
-Applications and Real-World Settings
-
-    Smart cities and urban computing (mobility, safety, accessibility, energy, sensing)
-    Healthcare and public health decision support
-    Industry 4.0, robotics, predictive maintenance, and industrial automation
-    Education and digital public services
-    Environmental monitoring and sustainability analytics
-    Public-sector and large-scale infrastructure AI
-    Negative results, lessons learned, and real-world failures
-
-Human-Centered and Trustworthy AI
-
-    Fairness-aware learning, bias mitigation, and equity metrics
-    Accessibility-by-design and inclusive intelligent services
-    Interpretability, transparency, and human-understandable policies/models
-    Robustness, calibration, reliability, and uncertainty estimation
-    Human-in-the-loop optimization, preference learning, interactive EC/ML
-    Auditability and evaluation protocols for real deployments
-
-Foundation Models in Systems Contexts
-
-    Deploying foundation models under system constraints
-    On-device / edge adaptation of LLMs and multimodal models
-    Retrieval-augmented and hybrid symbolic–neural systems
-    Efficiency, scalability, and evaluation of large models in production
-
-EC + ML Methods
-
-    Evolutionary hyperparameter optimization, AutoML, and neural architecture search
-    Population-based training, coevolutionary learning, and memetic EC–ML hybrids
-    Evolutionary reinforcement learning and policy search
-    Surrogate-assisted optimization and simulation-based optimization
-
-Cyber-Physical Systems, Digital Twins, and IoT
-
-    AI for cyber-physical systems and digital twins
-    Real-time analytics, monitoring, and anomaly detection
-    Simulation-based evaluation, sim-to-real transfer
-    IoT data management, streaming, and event-driven intelligence
-    Smart infrastructure and industrial systems
 
 
 
